@@ -1,0 +1,39 @@
+main {
+    min-height: 80vh;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.product-title {
+    height: 2.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-img-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-link img, .product-img, product-carousel-img {
+    float: left;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+.product-carousel-img{
+    width: 400px;
+    height: 400px;
+}
+.spinner {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    display: block;
+}
