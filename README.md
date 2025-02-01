@@ -3,11 +3,6 @@
 An e-commerce webapp that allows people to buy products, can process orders, accept payments through stripe, and manage shipping. This application is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with JWT secure user authentication, and incorporates React-Bootstrap for responsive design and Redux TK for state management and Redux TK Query for HTTP Requests such as query and mutation.
 
 
-## DEMO
-Visit the live demo of eshophue at:
-<!-- [Eshophue](https://eshophue/) -->
-
-
 ## Features
 - User authentication (sign up, login, logout)
 - Protected/Private Routes
