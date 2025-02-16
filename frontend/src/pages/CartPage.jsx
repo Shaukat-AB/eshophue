@@ -1,5 +1,5 @@
 import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
-import { TrashIcon } from "../../lib";
+import { TrashIcon } from "../lib";
 import { Message, ProductQuantity } from "../components";
 import { useNavigate, Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";

@@ -6,7 +6,7 @@ import {
     useDeleteUserMutation,
 } from "../../store/usersApiSlice";
 import { toast } from "react-toastify";
-import { EditIcon, TrashIcon } from "../../../lib";
+import { EditIcon, TrashIcon } from "../../lib";
 
 export const UserListPage = () => {
     const { pageParam } = useParams();

@@ -7,7 +7,7 @@ import {
     useDeleteProductMutation,
 } from "../../store/productsApiSlice";
 import { toast } from "react-toastify";
-import { EditIcon, TrashIcon } from "../../../lib";
+import { EditIcon, TrashIcon } from "../../lib";
 
 export const ProductListPage = () => {
     const { pageParam } = useParams();

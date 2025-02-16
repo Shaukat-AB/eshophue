@@ -6,7 +6,7 @@ import {
     NavDropdown,
     Button,
 } from "react-bootstrap";
-import { ShoppingCartIcon, UserIcon } from "../../../lib";
+import { ShoppingCartIcon, UserIcon } from "../../lib";
 import { Link, NavLink, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { useLogoutMutation } from "../../store/usersApiSlice";

@@ -1,4 +1,4 @@
-import { StarHalfIcon, StarIcon, StarEmptyIcon } from "../../../lib";
+import { StarHalfIcon, StarIcon, StarEmptyIcon } from "../../lib";
 
 export const Ratings = ({ value, count }) => {
     const ratingsElement = [];
