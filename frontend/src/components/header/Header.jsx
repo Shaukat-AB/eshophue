@@ -9,12 +9,12 @@ import {
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useLogoutMutation } from "../store/usersApiSlice";
-import { logout } from "../store/authSlice";
-import { clearCartItems } from "../store/cartSlice";
+import { useLogoutMutation } from "../../store/usersApiSlice";
+import { logout } from "../../store/authSlice";
+import { clearCartItems } from "../../store/cartSlice";
 import { toast } from "react-toastify";
 import { Search } from "./Search";
-import Logo from "../assets/eshophue-logo.png";
+import Logo from "../../assets/images/eshophue-logo.png";
 
 export const Header = () => {
     const { cartItems } = useSelector((state) => state.cart);

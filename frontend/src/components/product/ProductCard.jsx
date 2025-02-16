@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Ratings } from "./Ratings";
-import { DOMAIN } from "../constants";
+import { DOMAIN } from "../../constants";
 
 export const ProductCard = ({ product }) => {
     return (

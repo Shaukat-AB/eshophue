@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { DOMAIN } from "../constants";
+import { DOMAIN } from "../../constants";
 import { Col, ListGroup, Row, Image } from "react-bootstrap";
 
 export const LineOrderItems = ({ items }) => {
