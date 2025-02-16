@@ -1,12 +1,14 @@
 import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
 import { TrashIcon } from "../../lib";
-import { Message, PageTitle, ProductQuantity } from "../components";
+import { Message, ProductQuantity } from "../components";
 import { useNavigate, Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../store/cartSlice";
 import { DOMAIN } from "../constants";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export const CartPage = () => {
+    const pageTitle = usePageTitle("Products Cart");
     const cart = useSelector((state) => state.cart);
     const { cartItems, itemsPrice } = cart;
     const dispatch = useDispatch();
@@ -26,7 +28,6 @@ export const CartPage = () => {
 
     return (
         <>
-            <PageTitle title={"Cart Products"} />
             <Link className="btn btn-light my-3 " to="/">
                 Go Back
             </Link>

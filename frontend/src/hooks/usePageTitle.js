@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
-export const PageTitle = ({ title }) => {
+export const usePageTitle = (title = "") => {
     const path = useLocation();
 
     useEffect(() => {
-        document.title = title || "EShopehue";
+        document.title = title ? title + " | EShopehue" : "EShopehue";
     }, [path, title]);
-    return null;
+    return [title];
 };

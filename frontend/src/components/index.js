@@ -5,7 +5,6 @@ export { ProductCard } from "./product/ProductCard";
 export { Ratings } from "./product/Ratings";
 export { Spinner } from "./loading-error-message/Spinner";
 export { Message } from "./loading-error-message/Message";
-export { PageTitle } from "./PageTitle";
 export { LineOrderItems } from "./checkout/LineOrderItems";
 export { ProductQuantity } from "./product/ProductQuantity";
 export { CheckoutSteps } from "./checkout/CheckoutSteps";

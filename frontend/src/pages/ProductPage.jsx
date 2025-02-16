@@ -5,7 +5,6 @@ import {
     ProductQuantity,
     Reviews,
     LoadingErrorWrapper,
-    PageTitle,
 } from "../components";
 import {
     useGetProductByIdQuery,
@@ -16,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { DOMAIN } from "../constants";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export const ProductPage = () => {
     const { id: productId } = useParams();
@@ -25,6 +25,7 @@ export const ProductPage = () => {
         error,
         refetch,
     } = useGetProductByIdQuery(productId);
+    const pageTitle = usePageTitle(product?.name);
 
     const [orderCount, setOrderCount] = useState(1);
 
@@ -51,7 +52,6 @@ export const ProductPage = () => {
 
     return (
         <LoadingErrorWrapper isLoading={isLoading} error={error}>
-            <PageTitle title={product?.name} />
             <Link className="btn btn-light my-3 " to="/">
                 Go Back
             </Link>

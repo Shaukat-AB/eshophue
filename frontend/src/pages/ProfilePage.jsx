@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { Spinner, LoadingErrorWrapper, PageTitle } from "../components";
+import { Spinner, LoadingErrorWrapper } from "../components";
 import { Button, Col, Form, Row, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useProfileMutation } from "../store/usersApiSlice";
 import { useGetMyOrderQuery } from "../store/ordersApiSlice";
 import { setCredentials } from "../store/authSlice";
 import { toast } from "react-toastify";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export const ProfilePage = () => {
     const { userInfo } = useSelector((state) => state.auth);
@@ -23,6 +24,7 @@ export const ProfilePage = () => {
         isLoading: ordersIsLoading,
         error,
     } = useGetMyOrderQuery();
+    const pageTitle = usePageTitle("User profile");
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -46,7 +48,6 @@ export const ProfilePage = () => {
 
     return (
         <Row>
-            <PageTitle title={"User profile"}/>
             <Col md={3}>
                 <h2>User Profile</h2>
                 <Form onSubmit={onSubmit}>

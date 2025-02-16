@@ -1,0 +1,1 @@
+import { usePageTitle } from "./usePageTitle";

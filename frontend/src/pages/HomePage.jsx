@@ -5,7 +5,6 @@ import {
     Paginate,
     ProductCarousel,
     LoadingErrorWrapper,
-    PageTitle,
 } from "../components";
 import {
     useGetProductsQuery,
@@ -40,7 +39,6 @@ export const HomePage = () => {
                     <h1>Latest Products</h1>
                 ) : (
                     <>
-                        <PageTitle title={`Search for ${keyword}`}/>
                         <Link className="btn btn-light my-3 " to="/">
                             Go Back
                         </Link>
