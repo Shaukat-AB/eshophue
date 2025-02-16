@@ -6,8 +6,8 @@ import {
     useCreateProductMutation,
     useDeleteProductMutation,
 } from "../../store/productsApiSlice";
-import { FaEdit, FaTrash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { EditIcon, TrashIcon } from "../../../lib";
 
 export const ProductListPage = () => {
     const { pageParam } = useParams();
@@ -58,7 +58,7 @@ export const ProductListPage = () => {
                         onClick={onCreateProduct}
                         disabled={createProductLoading}
                     >
-                        <FaEdit /> Create Product
+                        <EditIcon /> Create Product
                     </Button>
                 </Col>
             </Row>
@@ -91,7 +91,7 @@ export const ProductListPage = () => {
                                         className="btn-sm mx-4"
                                         to={`/admin/products/${product._id}/edit`}
                                     >
-                                        <FaEdit />
+                                        <EditIcon />
                                     </Link>
                                     <Button
                                         variant="danger"
@@ -101,7 +101,7 @@ export const ProductListPage = () => {
                                         }
                                         disabled={deleteProductLoading}
                                     >
-                                        <FaTrash />
+                                        <TrashIcon />
                                     </Button>
                                 </td>
                             </tr>

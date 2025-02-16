@@ -6,7 +6,7 @@ import {
     NavDropdown,
     Button,
 } from "react-bootstrap";
-import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { ShoppingCartIcon, UserIcon } from "../../../lib";
 import { Link, NavLink, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { useLogoutMutation } from "../../store/usersApiSlice";
@@ -39,15 +39,15 @@ export const Header = () => {
             <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        <img className="logo" src={Logo} alt="EShophue" />
-                        {" "}EShophue
+                        <img className="logo" src={Logo} alt="EShophue" />{" "}
+                        EShophue
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse>
                         <Nav className="ms-auto">
                             <Search />
                             <Nav.Link as={NavLink} to="/cart">
-                                <FaShoppingCart /> Cart
+                                <ShoppingCartIcon /> Cart
                                 {cartItems.length > 0 && (
                                     <Badge pill bg="success" className="mx-2">
                                         {cartItems.reduce(
@@ -103,7 +103,7 @@ export const Header = () => {
                                 </NavDropdown>
                             ) : (
                                 <Nav.Link as={NavLink} to="/login">
-                                    <FaUser /> Sign In
+                                    <UserIcon /> Sign In
                                 </Nav.Link>
                             )}
                         </Nav>

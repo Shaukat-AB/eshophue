@@ -1,4 +1,4 @@
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { StarHalfIcon, StarIcon, StarEmptyIcon } from "../../../lib";
 
 export const Ratings = ({ value, count }) => {
     const ratingsElement = [];
@@ -7,11 +7,11 @@ export const Ratings = ({ value, count }) => {
         ratingsElement.push(
             <span key={i + 1}>
                 {value >= i + 1 ? (
-                    <FaStar />
+                    <StarIcon />
                 ) : value >= i + 0.5 ? (
-                    <FaStarHalfAlt />
+                    <StarHalfIcon />
                 ) : (
-                    <FaRegStar />
+                    <StarEmptyIcon />
                 )}
             </span>
         );

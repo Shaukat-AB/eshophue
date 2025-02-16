@@ -1,5 +1,5 @@
 import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
-import { FaTrash } from "react-icons/fa";
+import { TrashIcon } from "../../lib";
 import { Message, PageTitle, ProductQuantity } from "../components";
 import { useNavigate, Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
@@ -26,7 +26,7 @@ export const CartPage = () => {
 
     return (
         <>
-            <PageTitle title={"Cart Products"}/>
+            <PageTitle title={"Cart Products"} />
             <Link className="btn btn-light my-3 " to="/">
                 Go Back
             </Link>
@@ -70,7 +70,7 @@ export const CartPage = () => {
                                                     onRemoveFromCart(item._id)
                                                 }
                                             >
-                                                <FaTrash />
+                                                <TrashIcon />
                                             </Button>
                                         </Col>
                                     </Row>
@@ -78,9 +78,7 @@ export const CartPage = () => {
                             ))}
                         </ListGroup>
                     ) : (
-                        <Message>
-                            Cart is empty
-                        </Message>
+                        <Message>Cart is empty</Message>
                     )}
                 </Col>
                 <Col md={4}>

@@ -5,8 +5,8 @@ import {
     useGetUsersQuery,
     useDeleteUserMutation,
 } from "../../store/usersApiSlice";
-import { FaEdit, FaTrash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { EditIcon, TrashIcon } from "../../../lib";
 
 export const UserListPage = () => {
     const { pageParam } = useParams();
@@ -67,7 +67,7 @@ export const UserListPage = () => {
                                             `/admin/users/${user._id}/edit`
                                         }
                                     >
-                                        <FaEdit />
+                                        <EditIcon />
                                     </Link>
                                     <Button
                                         variant="danger"
@@ -77,7 +77,7 @@ export const UserListPage = () => {
                                             deleteUserLoading || user.isAdmin
                                         }
                                     >
-                                        <FaTrash />
+                                        <TrashIcon />
                                     </Button>
                                 </td>
                             </tr>
