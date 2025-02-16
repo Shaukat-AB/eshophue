@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import { Message } from "../components";
-import { Link, useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router";
 
 export const ErrorPage = () => {
     const error = useRouteError();

@@ -1,7 +1,7 @@
 import { Header, Footer, PageTitle } from "../components";
 import { ErrorPage } from "../pages";
-import { Outlet } from "react-router-dom";
-import { ScrollRestoration} from "react-router-dom";
+import { Outlet } from "react-router";
+import { ScrollRestoration} from "react-router";
 import { Container } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 

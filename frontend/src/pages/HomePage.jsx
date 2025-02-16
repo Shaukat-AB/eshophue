@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router";
 import {
     ProductCard,
     Paginate,

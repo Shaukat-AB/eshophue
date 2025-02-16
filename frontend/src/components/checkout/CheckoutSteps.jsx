@@ -1,5 +1,5 @@
 import { Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export const CheckoutSteps = ({ step }) => {
 

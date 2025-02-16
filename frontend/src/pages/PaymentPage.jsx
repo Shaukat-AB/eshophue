@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { FormWrapper, CheckoutSteps } from "../components";
 import { Button, Col, Form } from "react-bootstrap";
 import { useSelector } from "react-redux";

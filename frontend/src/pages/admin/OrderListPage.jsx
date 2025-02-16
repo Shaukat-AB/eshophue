@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { LoadingErrorWrapper } from "../../components";
 import { Table } from "react-bootstrap";
 import { useGetOrdersQuery } from "../../store/ordersApiSlice";

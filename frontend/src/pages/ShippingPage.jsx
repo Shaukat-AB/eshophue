@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { CheckoutSteps, FormWrapper } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { setShippingAddress } from "../store/cartSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
 export const ShippingPage = () => {

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Form, ListGroup, Button } from "react-bootstrap";
 import { Ratings, Spinner, Message, FormWrapper } from "..";
 import { useSelector } from "react-redux";

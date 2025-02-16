@@ -16,7 +16,7 @@ import {
     UserListPage,
 } from "./pages";
 import { Root, PrivateRoute, AdminRoute } from "./routes";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
 const App = () => {
     const router = createBrowserRouter([

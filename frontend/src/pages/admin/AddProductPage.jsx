@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router";
 import { Button, Form } from "react-bootstrap";
 import { Spinner, FormWrapper, LoadingErrorWrapper } from "../../components";
 import {

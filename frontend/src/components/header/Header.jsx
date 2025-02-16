@@ -7,7 +7,7 @@ import {
     Button,
 } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { useLogoutMutation } from "../../store/usersApiSlice";
 import { logout } from "../../store/authSlice";

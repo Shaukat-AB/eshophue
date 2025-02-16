@@ -1,7 +1,7 @@
 import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
 import { Message, PageTitle, ProductQuantity } from "../components";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../store/cartSlice";
 import { DOMAIN } from "../constants";

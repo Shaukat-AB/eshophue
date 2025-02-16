@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Pagination } from "react-bootstrap";
 
 export const Paginate = ({ pages, page, pathname }) => {

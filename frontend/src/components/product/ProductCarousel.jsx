@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Carousel, Image } from "react-bootstrap";
 
 export const ProductCarousel = ({ products }) => {

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { Row, Col, Button, Table } from "react-bootstrap";
 import { Spinner, Paginate, LoadingErrorWrapper } from "../../components";
 import {
