@@ -81,38 +81,39 @@ const router = createBrowserRouter([
                 ],
             },
             {
+                path: "/admin",
                 element: <AdminRoute />,
                 children: [
                     {
-                        path: "/admin/orderlist",
+                        path: "orderlist",
                         element: <OrderListPage />,
                     },
                     {
-                        path: "/admin/userlist",
+                        path: "userlist",
                         element: <UserListPage />,
                     },
                     {
-                        path: "/admin/userlist/page/:pageParam",
+                        path: "userlist/page/:pageParam",
                         element: <UserListPage />,
                     },
                     {
-                        path: "/admin/productlist",
+                        path: "productlist",
                         element: <ProductListPage />,
                     },
                     {
-                        path: "/admin/productlist/page/:pageParam",
+                        path: "productlist/page/:pageParam",
                         element: <ProductListPage />,
                     },
                     {
-                        path: "/admin/products/:id/add",
+                        path: "products/:id/add",
                         element: <AddProductPage />,
                     },
                     {
-                        path: "/admin/products/:id/edit",
+                        path: "products/:id/edit",
                         element: <AddProductPage />,
                     },
                     {
-                        path: "/admin/users/:id/edit",
+                        path: "users/:id/edit",
                         element: <UpdateUserPage />,
                     },
                 ],
