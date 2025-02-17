@@ -36,15 +36,7 @@ const router = createBrowserRouter([
                 element: <HomePage index />,
             },
             {
-                path: "/page/:pageParam",
-                element: <HomePage />,
-            },
-            {
                 path: "/search/:keyword",
-                element: <SearchPage />,
-            },
-            {
-                path: "/search/:keyword/page/:pageParam",
                 element: <SearchPage />,
             },
             {

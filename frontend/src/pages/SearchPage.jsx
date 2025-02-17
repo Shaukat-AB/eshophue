@@ -1,10 +1,12 @@
 import { Row, Col } from "react-bootstrap";
-import { useParams, Link } from "react-router";
+import { useParams, Link, useSearchParams } from "react-router";
 import { ProductCard, Paginate, LoadingErrorWrapper } from "../components";
 import { useGetProductsQuery } from "../store/productsApiSlice";
 
 export const SearchPage = () => {
-    const { pageParam, keyword } = useParams();
+    const { keyword } = useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const pageParam = searchParams.get("page");
     const { data, isLoading, error, isFetching } = useGetProductsQuery({
         pageParam,
         keyword,
