@@ -1,4 +1,4 @@
-import App from "../App";
+import { AppLayout } from "../AppLayout";
 import {
     ErrorPage,
     AddProductPage,
@@ -27,7 +27,7 @@ import {
 
 const router = createBrowserRouter([
     {
-        element: <App />,
+        element: <AppLayout />,
         errorElement: <ErrorPage />,
         children: [
             {

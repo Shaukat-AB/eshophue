@@ -4,21 +4,17 @@ import { Container } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import { usePageTitle } from "./hooks/usePageTitle";
 
-const App = () => {
+export const AppLayout = ({ children }) => {
     const pageTitle = usePageTitle();
 
     return (
         <>
             <Header />
             <main className="py-3">
-                <Container>
-                    <Outlet />
-                </Container>
+                <Container>{children ?? <Outlet />}</Container>
             </main>
             <Footer />
             <ToastContainer />
         </>
     );
 };
-
-export default App;
