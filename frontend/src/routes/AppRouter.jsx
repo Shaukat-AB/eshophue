@@ -1,6 +1,6 @@
 import App from "../App";
-import { ErrorPage } from "../pages";
 import {
+    ErrorPage,
     AddProductPage,
     CartPage,
     HomePage,
