@@ -16,8 +16,8 @@ import {
     ShippingPage,
     UpdateUserPage,
     UserListPage,
+    SearchPage,
 } from "../pages";
-import { SearchPage } from "../pages/SearchPage";
 import { AdminRoute } from "./AdminRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import {

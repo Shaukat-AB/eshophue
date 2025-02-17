@@ -2,7 +2,7 @@ export { ErrorPage } from "./ErrorPage";
 
 //  Public
 export { HomePage } from "./HomePage";
-import { SearchPage } from "./SearchPage";
+export { SearchPage } from "./SearchPage";
 export { ProductPage } from "./ProductPage";
 export { CartPage } from "./CartPage";
 export { LoginPage } from "./LoginPage";
