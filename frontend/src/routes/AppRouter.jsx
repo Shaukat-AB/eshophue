@@ -17,6 +17,7 @@ import {
     UpdateUserPage,
     UserListPage,
 } from "../pages";
+import { SearchPage } from "../pages/SearchPage";
 import { AdminRoute } from "./AdminRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import {
@@ -35,16 +36,16 @@ const router = createBrowserRouter([
                 element: <HomePage index />,
             },
             {
-                path: "/search/:keyword",
+                path: "/page/:pageParam",
                 element: <HomePage />,
+            },
+            {
+                path: "/search/:keyword",
+                element: <SearchPage />,
             },
             {
                 path: "/search/:keyword/page/:pageParam",
-                element: <HomePage />,
-            },
-            {
-                path: "/page/:pageParam",
-                element: <HomePage />,
+                element: <SearchPage />,
             },
             {
                 path: "/products/:id",
