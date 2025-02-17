@@ -14,7 +14,7 @@ export const ErrorPage = () => {
                     <h1 className="mb-4">Somthing went wrong!</h1>
                     <em className="fs-2">
                         <Message variant="danger">
-                            {error.statusText || error.message}
+                            {error.message || error.statusText || "Unexpected Error"}
                         </Message>
                     </em>
 
