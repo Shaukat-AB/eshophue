@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { Link, useParams, useSearchParams } from "react-router";
 import { Row, Col, Button, Table } from "react-bootstrap";
 import { Spinner, Paginate, LoadingErrorWrapper } from "../../components";
 import {
@@ -10,7 +10,8 @@ import { toast } from "react-toastify";
 import { EditIcon, TrashIcon } from "../../lib";
 
 export const ProductListPage = () => {
-    const { pageParam } = useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const pageParam = searchParams.get("page");
     const { data, isLoading, error, refetch, isFetching } = useGetProductsQuery(
         { pageParam }
     );

@@ -93,15 +93,7 @@ const router = createBrowserRouter([
                         element: <UserListPage />,
                     },
                     {
-                        path: "userlist/page/:pageParam",
-                        element: <UserListPage />,
-                    },
-                    {
                         path: "productlist",
-                        element: <ProductListPage />,
-                    },
-                    {
-                        path: "productlist/page/:pageParam",
                         element: <ProductListPage />,
                     },
                     {
