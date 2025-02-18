@@ -1,4 +1,4 @@
-import { Link, useParams, useSearchParams } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { Row, Col, Button, Table } from "react-bootstrap";
 import { Spinner, Paginate, LoadingErrorWrapper } from "../../components";
 import {
@@ -16,7 +16,6 @@ export const ProductListPage = () => {
         { pageParam }
     );
     const { products, pages, page } = data || {};
-    const pathname = "/admin/productlist";
 
     const [createProduct, { isLoading: createProductLoading }] =
         useCreateProductMutation();
@@ -109,7 +108,11 @@ export const ProductListPage = () => {
                         ))}
                     </tbody>
                 </Table>
-                <Paginate pages={pages} page={page} pathname={pathname} setParams={setSearchParams} />
+                <Paginate
+                    pages={pages}
+                    page={page}
+                    setParams={setSearchParams}
+                />
             </LoadingErrorWrapper>
         </>
     );

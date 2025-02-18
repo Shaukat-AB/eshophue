@@ -3,7 +3,6 @@ import { Button, Pagination } from "react-bootstrap";
 export const Paginate = ({
     pages,
     page,
-    pathname,
     setParams = (pageNow = 1) => null,
 }) => {
     const onNextPage = (pageNow = 1) => {

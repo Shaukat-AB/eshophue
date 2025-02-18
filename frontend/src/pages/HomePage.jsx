@@ -18,7 +18,6 @@ export const HomePage = () => {
         pageParam,
     });
     const { products, pages, page } = data || {};
-    const pathname = "";
 
     const {
         data: topProducts,
@@ -41,7 +40,11 @@ export const HomePage = () => {
                         </Col>
                     ))}
                 </Row>
-                <Paginate pages={pages} page={page} pathname={pathname} setParams={setSearchParams} />
+                <Paginate
+                    pages={pages}
+                    page={page}
+                    setParams={setSearchParams}
+                />
             </LoadingErrorWrapper>
         </>
     );

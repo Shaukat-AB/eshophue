@@ -1,4 +1,4 @@
-import { Link, useParams, useSearchParams } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { Row, Col, Button, Table } from "react-bootstrap";
 import { Spinner, Paginate, LoadingErrorWrapper } from "../../components";
 import {
@@ -14,7 +14,6 @@ export const UserListPage = () => {
     const { data, isLoading, error, refetch, isFetching } =
         useGetUsersQuery(pageParam);
     const { users, pages, page } = data || {};
-    const pathname = "/admin/userlist";
 
     const [deleteUser, { isLoading: deleteUserLoading }] =
         useDeleteUserMutation();
@@ -85,7 +84,11 @@ export const UserListPage = () => {
                         ))}
                     </tbody>
                 </Table>
-                <Paginate pages={pages} page={page} pathname={pathname} setParams={setSearchParams} />
+                <Paginate
+                    pages={pages}
+                    page={page}
+                    setParams={setSearchParams}
+                />
             </LoadingErrorWrapper>
         </>
     );

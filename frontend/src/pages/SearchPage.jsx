@@ -12,7 +12,6 @@ export const SearchPage = () => {
         keyword,
     });
     const { products, pages, page } = data || {};
-    const pathname = `/search/${keyword}`;
 
     return (
         <LoadingErrorWrapper isLoading={isLoading || isFetching} error={error}>
@@ -27,7 +26,7 @@ export const SearchPage = () => {
                     </Col>
                 ))}
             </Row>
-            <Paginate pages={pages} page={page} pathname={pathname} setParams={setSearchParams} />
+            <Paginate pages={pages} page={page} setParams={setSearchParams} />
         </LoadingErrorWrapper>
     );
 };
