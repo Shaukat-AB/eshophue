@@ -8,7 +8,7 @@ export { Message } from "./loading-error-message/Message";
 export { LineOrderItems } from "./checkout/LineOrderItems";
 export { ProductQuantity } from "./product/ProductQuantity";
 export { CheckoutSteps } from "./checkout/CheckoutSteps";
-export { Reviews } from "./form/Reviews";
+export { Reviews } from "./product/Reviews";
 export { Paginate } from "./pagination/Paginate";
 export { Search } from "./header/Search";
 export { ProductCarousel } from "./product/ProductCarousel";

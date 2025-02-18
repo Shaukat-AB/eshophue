@@ -1,6 +1,6 @@
 import { ListGroup } from "react-bootstrap";
 import { Ratings, Message } from "..";
-import { ReviewForm } from "./ReviewForm";
+import { ReviewForm } from "../form/ReviewForm";
 import { toast } from "react-toastify";
 import { useCreateReviewMutation } from "../../store/productsApiSlice";
 
