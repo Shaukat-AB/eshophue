@@ -27,7 +27,7 @@ export const SearchPage = () => {
                     </Col>
                 ))}
             </Row>
-            <Paginate pages={pages} page={page} pathname={pathname} />
+            <Paginate pages={pages} page={page} pathname={pathname} setParams={setSearchParams} />
         </LoadingErrorWrapper>
     );
 };

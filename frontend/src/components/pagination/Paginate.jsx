@@ -1,17 +1,25 @@
-import { Link } from "react-router";
-import { Pagination } from "react-bootstrap";
+import { Button, Pagination } from "react-bootstrap";
 
-export const Paginate = ({ pages, page, pathname }) => {
+export const Paginate = ({
+    pages,
+    page,
+    pathname,
+    setParams = (pageNow = 1) => null,
+}) => {
+    const onNextPage = (pageNow = 1) => {
+        setParams({ page: pageNow });
+    };
+
     return (
         <>
             {pages > 1 && (
                 <Pagination className="py-4">
                     {[...Array(pages).keys()].map((p) => (
                         <Pagination.Item
-                            as={Link}
+                            as={Button}
                             key={p + 1}
                             active={p + 1 === page}
-                            to={`${pathname}?page=${p + 1}`}
+                            onClick={() => onNextPage(p + 1)}
                         >
                             {p + 1}
                         </Pagination.Item>

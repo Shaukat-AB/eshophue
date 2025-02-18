@@ -109,7 +109,7 @@ export const ProductListPage = () => {
                         ))}
                     </tbody>
                 </Table>
-                <Paginate pages={pages} page={page} pathname={pathname} />
+                <Paginate pages={pages} page={page} pathname={pathname} setParams={setSearchParams} />
             </LoadingErrorWrapper>
         </>
     );
