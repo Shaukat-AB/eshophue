@@ -6,14 +6,10 @@ import {
     Reviews,
     LoadingErrorWrapper,
 } from "../components";
-import {
-    useGetProductByIdQuery,
-    useCreateReviewMutation,
-} from "../store/productsApiSlice";
+import { useGetProductByIdQuery } from "../store/productsApiSlice";
 import { addToCart } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { toast } from "react-toastify";
 import { DOMAIN } from "../constants";
 import { usePageTitle } from "../hooks/usePageTitle";
 
@@ -32,22 +28,9 @@ export const ProductPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const [createReview, { isLoading: createRevLoading }] =
-        useCreateReviewMutation();
-
     const onAddToCart = () => {
         dispatch(addToCart({ ...product, orderCount }));
         navigate("/cart");
-    };
-
-    const onSubmit = async (review) => {
-        try {
-            const res = await createReview(review).unwrap();
-            refetch();
-            toast.success("Review added successfully");
-        } catch (err) {
-            toast.error(err?.data?.message || err?.status);
-        }
     };
 
     return (
@@ -131,11 +114,7 @@ export const ProductPage = () => {
                     </Card>
                 </Col>
             </Row>
-            <Reviews
-                product={product}
-                isLoading={createRevLoading}
-                onSubmit={onSubmit}
-            />
+            <Reviews product={product} refetch={refetch} />
         </LoadingErrorWrapper>
     );
 };
