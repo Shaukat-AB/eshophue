@@ -17,7 +17,7 @@ export const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse>
                         <Nav className="ms-auto">
-                            <Search />
+                            <Search navigateToSearchPage={true} />
                             <ShoppingCartLink />
                             <UserDropdown />
                         </Nav>
